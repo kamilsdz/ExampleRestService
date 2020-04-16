@@ -1,4 +1,4 @@
-package com.example.examplerestservice;
+package com.example.examplerestservice.api.healthcontroller;
 
 import static org.hamcrest.Matchers.containsString;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -14,7 +14,7 @@ import org.springframework.test.web.servlet.MockMvc;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-class ExampleRestServiceApplicationTests {
+class HealthControllerTests {
 
   @Autowired
   private MockMvc mockMvc;
@@ -27,5 +27,4 @@ class ExampleRestServiceApplicationTests {
       .andExpect(status().isOk())
       .andExpect(content().string(containsString("OK")));
   }
-
 }
